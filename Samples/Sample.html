@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>NickLineSlider - Sample</title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .sampleNavBarContainer {
+            display: inline-block;
+            height: 200px;
+            width:100%;
+            background-color: black;
+            padding-top: 90px;
+        }
+
+        li {
+            display: inline;
+            color: white;
+            padding-left: 25px;
+            font-family: 'Lucida Console';
+        }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        #sample3NavBar > div {
+            display: inline-block;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="navbar-brand">NickLineSlider - Sample</div>
+                <div class="d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="https://docs.njhayward.com/NickLineSlider/">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            Look at the files source to see how this is configured
+
+            <div class="sampleNavBarContainer">
+                <ul id="sampleNavBar">
+                    <li><a href="#" class="nickLineSliderCurrent">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+
+            <div class="sampleNavBarContainer">
+                <ul id="sample2NavBar">
+                    <li><a href="#" class="nickLineSliderCurrent">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+
+            <div class="sampleNavBarContainer">
+                <div id="sample3NavBar">
+                    <div><a href="#" class="nickLineSliderCurrent">Home</a></div>
+                    <div><a href="#">News</a></div>
+                    <div><a href="#">Contact</a></div>
+                    <div><a href="#">About</a></div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /* configure first slider */
+                $("#sampleNavBar").nickLineSlider({
+                    HRTopMargin: "0",
+                    Color: "#BB0F0F",
+                    ChangeColorOnCurrent: true,
+                    ChangeColorOnHover: false,
+                    PercentageExtraWidth: 20,
+                    AppearWidth: 410,
+                    LoadDelay: 0,
+                    DoFadeIn: true
+                });
+
+                /* configure second slider */
+                $("#sample2NavBar").nickLineSlider({
+                    HRTopMargin: "0",
+                    Color: "Blue",
+                    ChangeColorOnCurrent: true,
+                    ChangeColorOnHover: true,
+                    PercentageExtraWidth: 30,
+                    AppearWidth: 410,
+                    LoadDelay: 1000,
+                    DoFadeIn: true
+                });
+
+                /* configure div slider */
+                $("#sample3NavBar").nickLineSlider({
+                    HRTopMargin: "15px",
+                    Color: "Green",
+                    ChangeColorOnCurrent: false,
+                    ChangeColorOnHover: false,
+                    PercentageExtraWidth: 40,
+                    AppearWidth: 410,
+                    LoadDelay: 2000,
+                    DoFadeIn: true
+                });
+            });
+        </script>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            More information can be found in the <a class="text-dark" href="https://docs.njhayward.com/NickLineSlider/">docs</a>
+        </div>
+    </footer>
+
+    <!-- include dist js files for slider -->
+    <link rel="stylesheet" href="../Dist/jQuery.nickLineSlider.min.css">
+    <script src="../Dist/jQuery.nickLineSlider.min.js"></script>
+</body>
+</html>
